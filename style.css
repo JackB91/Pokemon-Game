@@ -3,7 +3,7 @@
   
 }
 
-button, input, select, textarea {
+button, input, select, textarea,li {
     font-family: inherit;
     font-weight: inherit;
     
@@ -16,10 +16,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-font-family: 'roboto';
-background-color: lightsteelblue;
+    font-family: 'roboto';
+    background-color: lightsteelblue;
 }
 
+.rules {
+   border-radius: 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+    padding: 1rem;
+}
+
+li {
+    font-size: 1.7rem;
+    
+}
+.start {
+    width:50%;
+    background-color: lightyellow;  
+    
+}
+
+.start:hover {
+    background-color: lightgreen;
+}
 
 
 
@@ -41,6 +67,7 @@ background-color: lightsteelblue;
     justify-content: center;
     text-align: center;
     background-color: lightblue;
+    display: none;
 }
 
 
@@ -59,7 +86,7 @@ padding: 1rem;
 }
 
 
-h1 {
+h1, .welcome {
     color: yellow;
     text-shadow: 
     -1.5px -1.5px 0 blue,  
@@ -68,6 +95,7 @@ h1 {
     1.5px 1.5px 0 blue; 
     font-style: italic;
     font-size: 2.5rem;
+    
 }
 
 h2 {
