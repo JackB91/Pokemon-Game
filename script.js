@@ -91,7 +91,7 @@ function handleEnd() {
     alert("GAME OVER, you ran out of lives");
   }
 
-  if (Number(score.innerHTML) === 50) {
+  if (Number(score.innerHTML) === 20) {
     alert("CONGRATULATIONS You Win");
   }
 }
