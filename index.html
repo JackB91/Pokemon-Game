@@ -16,9 +16,9 @@
   <body>
     <div class="game">
       <div class="lives-skips">
-        <h2>Skips Left <span id="skip-count">3</span></h2>
+        <h2>Skips Left: <span id="skip-count">3</span></h2>
 
-        <h2>Lives <span id="life-count">0</span></h2>
+        <h2>Lives: <span id="life-count">0</span></h2>
       </div>
 
       <h1 id="name">Who's that Pokemon?</h1>
@@ -30,8 +30,9 @@
           id="guess"
           type="text"
           placeholder="Enter your guess here..."
+          autocomplete="off"
         />
-        <button id="submitBtn">Submit</button>
+        <button class="submitBtn" id="submitBtn">Submit</button>
       </form>
 
       <div class="skip-next">
@@ -40,7 +41,7 @@
       </div>
 
       <div class="score">
-        <h2>Score Count</h2>
+        <h2>Score Count:</h2>
         <h3 id="score-count">0</h3>
       </div>
     </div>

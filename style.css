@@ -70,6 +70,9 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-weight: 500;
+}
 
 
 button {
@@ -86,6 +89,7 @@ button:hover {
 
 }
 
+
 .guess {
     padding: .5rem;
     border-radius: 20px;
@@ -93,3 +97,12 @@ button:hover {
     margin-right: .2rem;
 }
 
+.guess:focus {
+    outline: 2px solid green;
+}
+
+.submitBtn:hover {background-color: lightsalmon;}
+
+.skip:hover {background-color: lightcoral;}
+
+.next:hover {background-color: lightgreen;}
