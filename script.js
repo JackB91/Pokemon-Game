@@ -18,7 +18,7 @@ let skip_count = document.getElementById("skip-count");
 let life = document.getElementById("life-count");
 let score = document.getElementById("score-count");
 
-skip_count.innerHTML = 4;
+skip_count.innerHTML = 3;
 life.innerHTML = 5;
 score.innerHTML = 0;
 
@@ -33,10 +33,10 @@ async function randomPokemon() {
   image.src = pokemon.sprites.front_default;
 
   pokemonName = pokemon.name;
+
   console.log(pokemonName);
 
   image.style.filter = "blur(8px)";
-
   // handleSkip();
   handleNext();
 }
@@ -62,14 +62,18 @@ function checkGuess() {
   });
 }
 
+skip.addEventListener("click", handleSkip);
 function handleSkip() {
-  if (image.style.filter === "blur(8px)" && skip_count.innerHTML != 0) {
+  if (image.style.filter === "blur(8px)" && skip_count.innerHTML > 0) {
     skip_count.innerHTML = Number(skip_count.innerHTML) - 1;
     handleEnd();
-    skip.addEventListener("click", randomPokemon);
-  } else {
-    skip.removeEventListener("click", randomPokemon);
+    randomPokemon();
+
+    if (Number(skip_count.innerHTML) === 0) {
+      skip.removeEventListener("click", randomPokemon);
+    }
   }
+
   guess.value = "";
 }
 
@@ -93,7 +97,5 @@ function handleEnd() {
 }
 
 randomPokemon();
-handleSkip();
 checkGuess();
 handleNext();
-handleEnd();
