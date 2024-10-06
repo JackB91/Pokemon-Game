@@ -10,6 +10,16 @@ body {
     align-items: center;
     justify-content: center;}
 
+
+    .lives-skips {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: space-between;
+    }
+
 .game {
     border: 2px solid red;
     width: 50vw;
@@ -26,4 +36,12 @@ body {
     height: 200px;
     filter: blur(8px)
     
+}
+
+.skip-next {
+    display: flex;
+
+width: 100%;
+justify-content: space-between;
+padding: 1rem;
 }

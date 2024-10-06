@@ -12,6 +12,16 @@ let form = document.getElementById("guessForm");
 let skip = document.getElementById("skip");
 let next = document.getElementById("next");
 
+// scores skips and lives variables
+
+let skip_count = document.getElementById("skip-count");
+let life = document.getElementById("life-count");
+let score = document.getElementById("score-count");
+
+skip_count.innerHTML = 4;
+life.innerHTML = 5;
+score.innerHTML = 0;
+
 ///functions
 async function randomPokemon() {
   let num = Math.random() * (max - min) + min;
@@ -39,9 +49,13 @@ function checkGuess() {
 
     if (ans) {
       image.style.filter = "blur(0px)";
+      score.innerHTML = Number(score.innerHTML) + 1;
       handleSkip();
       handleNext();
+      handleEnd();
     } else {
+      life.innerHTML = Number(life.innerHTML) - 1;
+      handleEnd();
       alert("Incorrect try again. Or be pathetic and skip.");
     }
     guess.value = "";
@@ -49,7 +63,9 @@ function checkGuess() {
 }
 
 function handleSkip() {
-  if (image.style.filter === "blur(8px)") {
+  if (image.style.filter === "blur(8px)" && skip_count.innerHTML != 0) {
+    skip_count.innerHTML = Number(skip_count.innerHTML) - 1;
+    handleEnd();
     skip.addEventListener("click", randomPokemon);
   } else {
     skip.removeEventListener("click", randomPokemon);
@@ -66,7 +82,18 @@ function handleNext() {
   guess.value = "";
 }
 
+function handleEnd() {
+  if (Number(life.innerHTML) === 0) {
+    alert("GAME OVER, you ran out of lives");
+  }
+
+  if (Number(score.innerHTML) === 50) {
+    alert("CONGRATULATIONS You Win");
+  }
+}
+
 randomPokemon();
 handleSkip();
 checkGuess();
 handleNext();
+handleEnd();
