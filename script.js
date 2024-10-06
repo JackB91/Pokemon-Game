@@ -37,7 +37,7 @@ async function randomPokemon() {
 
   image.style.filter = "blur(8px)";
 
-  handleSkip();
+  // handleSkip();
   handleNext();
 }
 
