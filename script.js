@@ -87,18 +87,22 @@ function checkGuess() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let ans = guess.value.toLowerCase() === pokemonName.toLowerCase();
-
-    if (ans) {
-      image.style.filter = "blur(0px)";
-      score.innerHTML = Number(score.innerHTML) + 1;
-      handleSkip();
-      handleNext();
-      handleEnd();
+    if (guess.value.trim() === "") {
+      alert("Please enter a guess");
     } else {
-      life.innerHTML = Number(life.innerHTML) - 1;
-      handleEnd();
-      alert("Incorrect try again. Or be pathetic and skip.");
+      let ans = guess.value.toLowerCase() === pokemonName.toLowerCase();
+
+      if (ans) {
+        image.style.filter = "blur(0px)";
+        score.innerHTML = Number(score.innerHTML) + 1;
+        handleSkip();
+        handleNext();
+        handleEnd();
+      } else {
+        life.innerHTML = Number(life.innerHTML) - 1;
+        handleEnd();
+        alert("Incorrect try again.");
+      }
     }
     guess.value = "";
   });
