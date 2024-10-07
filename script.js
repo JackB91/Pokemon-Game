@@ -52,6 +52,11 @@ function playAgain() {
   game.classList.remove("hidden");
 
   win.classList.add("hidden");
+
+  skip_count.innerHTML = 3;
+  life.innerHTML = 5;
+  score.innerHTML = 0;
+  randomPokemon();
 }
 
 //lose game
@@ -62,6 +67,11 @@ function tryAgain() {
   game.classList.remove("hidden");
 
   loss.classList.add("hidden");
+
+  skip_count.innerHTML = 3;
+  life.innerHTML = 5;
+  score.innerHTML = 0;
+  randomPokemon();
 }
 
 //game functions
