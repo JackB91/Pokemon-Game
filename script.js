@@ -151,7 +151,7 @@ function handleEnd() {
     game.classList.remove("flex");
   }
 
-  if (Number(score.innerHTML) === 1) {
+  if (Number(score.innerHTML) === 20) {
     win.classList.add("flex");
     win.classList.remove("hidden");
 
