@@ -1,4 +1,9 @@
 //Variables
+//welcome/rules
+let rules = document.getElementById("rules");
+let start = document.getElementById("start");
+let game = document.getElementById("game");
+
 let pokemonName = "";
 let image = document.getElementById("image");
 
@@ -22,7 +27,20 @@ skip_count.innerHTML = 3;
 life.innerHTML = 5;
 score.innerHTML = 0;
 
-///functions
+///////////////////////////////////Functions//////////////////////////
+//start game
+
+start.addEventListener("click", startGame);
+function startGame() {
+  console.log("click");
+  rules.classList.add("hidden");
+  rules.classList.remove("flex");
+
+  game.classList.add("flex");
+  game.classList.remove("hidden");
+}
+
+//game functions
 async function randomPokemon() {
   let num = Math.random() * (max - min) + min;
   let random = Math.floor(num);

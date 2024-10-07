@@ -8,12 +8,20 @@ button, input, select, textarea,li {
     font-weight: inherit;
     
   }
+
+
+  .flex {
+    display: flex;
+  }
+
+  .hidden {
+    display: none ;
+  }
   
 
 body {
     width: 100vw;
     height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'roboto';
@@ -24,8 +32,6 @@ body {
    border-radius: 20px;
     font-size: 1.5rem;
     line-height: 2rem;
-    /* display: none; */
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -50,7 +56,6 @@ li {
 
 
     .lives-skips {
-        display: flex;
         flex-direction: row;
         width: 100%;
         padding-left: 1rem;
@@ -61,13 +66,12 @@ li {
 .game {
     border-radius: 20px;
     width: 50vw;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: lightblue;
-    display: none;
+    
 }
 
 
@@ -79,7 +83,6 @@ li {
 }
 
 .skip-next {
-    display: flex;
 width: 90%;
 justify-content: space-between;
 padding: 1rem;

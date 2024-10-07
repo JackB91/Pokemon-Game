@@ -13,8 +13,8 @@
     <script src="script.js" defer></script>
     <title>Pokemon Game</title>
   </head>
-  <body>
-    <div class="rules">
+  <body class="flex">
+    <div class="rules flex" id="rules">
       <h2 class="welcome">Ready to test your Pokemon knowledge?</h2>
       <ol>
         <li>Can you make it to 20?</li>
@@ -24,8 +24,8 @@
       <button class="start" id="start">Start Game</button>
     </div>
 
-    <div class="game">
-      <div class="lives-skips">
+    <div class="game hidden" id="game">
+      <div class="lives-skips flex">
         <h2>Skips Left: <span id="skip-count">3</span></h2>
 
         <h2>Lives: <span id="life-count">0</span></h2>
@@ -45,7 +45,7 @@
         <button class="submitBtn" id="submitBtn">Submit</button>
       </form>
 
-      <div class="skip-next">
+      <div class="skip-next flex">
         <button class="skip" id="skip">Skip</button>
         <button class="next" id="next">Next</button>
       </div>
