@@ -87,13 +87,12 @@ li {
 
 .game {
     border-radius: 20px;
-    width: 50vw;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: lightblue;
-    
+    background-color: lightblue; 
 }
 
 
