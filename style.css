@@ -39,6 +39,28 @@ body {
     padding: 1rem;
 }
 
+
+.win, .loss {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.win h2 {
+    font-size: 3.5rem;
+}
+
+.loss h2 {
+    font-size: 3.5rem;
+    color: red;
+}
+
+
+
+
 li {
     font-size: 1.7rem;
     
@@ -76,8 +98,8 @@ li {
 
 
 #image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     filter: blur(8px)
     
 }
@@ -89,7 +111,7 @@ padding: 1rem;
 }
 
 
-h1, .welcome {
+h1, .welcome, .winner {
     color: yellow;
     text-shadow: 
     -1.5px -1.5px 0 blue,  

@@ -3,6 +3,9 @@
 let rules = document.getElementById("rules");
 let start = document.getElementById("start");
 let game = document.getElementById("game");
+let playagain = document.getElementById("play-again");
+let win = document.getElementById("win");
+let tryagain = document.getElementById("try-again");
 
 let pokemonName = "";
 let image = document.getElementById("image");
@@ -38,6 +41,27 @@ function startGame() {
 
   game.classList.add("flex");
   game.classList.remove("hidden");
+}
+
+//win game
+
+playagain.addEventListener("click", playAgain);
+
+function playAgain() {
+  game.classList.add("flex");
+  game.classList.remove("hidden");
+
+  win.classList.add("hidden");
+}
+
+//lose game
+tryagain.addEventListener("click", tryAgain);
+
+function tryAgain() {
+  game.classList.add("flex");
+  game.classList.remove("hidden");
+
+  loss.classList.add("hidden");
 }
 
 //game functions
@@ -106,11 +130,19 @@ function handleNext() {
 
 function handleEnd() {
   if (Number(life.innerHTML) === 0) {
-    alert("GAME OVER, you ran out of lives");
+    loss.classList.remove("hidden");
+    loss.classList.add("flex");
+
+    game.classList.add("hidden");
+    game.classList.remove("flex");
   }
 
-  if (Number(score.innerHTML) === 20) {
-    alert("CONGRATULATIONS You Win");
+  if (Number(score.innerHTML) === 1) {
+    win.classList.add("flex");
+    win.classList.remove("hidden");
+
+    game.classList.add("hidden");
+    game.classList.remove("flex");
   }
 }
 
