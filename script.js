@@ -90,6 +90,9 @@ async function randomPokemon() {
 
   image.style.filter = "blur(8px)";
 
+  guess.disabled = false;
+  submitBtn.disabled = false;
+
   handleNext();
 }
 
@@ -105,6 +108,8 @@ function checkGuess() {
       if (ans) {
         image.style.filter = "blur(0px)";
         score.innerHTML = Number(score.innerHTML) + 1;
+        guess.disabled = true;
+        submitBtn.disabled = true;
         handleSkip();
         handleNext();
         handleEnd();

@@ -100,7 +100,6 @@ li {
     width: 250px;
     height: 250px;
     filter: blur(8px)
-    
 }
 
 .skip-next {
@@ -158,3 +157,5 @@ button:hover {
 .skip:hover {background-color: lightcoral;}
 
 .next:hover {background-color: lightgreen;}
+
+
